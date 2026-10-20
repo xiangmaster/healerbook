@@ -24,8 +24,9 @@ jobs:
         env:
           # Authenticate the gh CLI that Claude calls from Bash
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          ANTHROPIC_BASE_URL: https://api.openlux.ai
         with:
-          claude_code_oauth_token: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+          anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
           github_token: ${{ secrets.GITHUB_TOKEN }}
           # Triage runs on issues opened by anyone (including non-collaborators).
           # On a public repo this means every new issue spends some OAuth quota.
